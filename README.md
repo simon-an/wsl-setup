@@ -22,4 +22,18 @@
 
 - zsh
 - ohmyzsh
-...
+- fuck
+- unzip/zip
+- pip3
+- sdkman
+- adopt openjdk
+- maven
+- copy some data under ~ to a backup folder under windows 
+- ssh port change and username/password login
+
+## TODOS:
+
+    - test agnoster theme
+    - ssh with keys
+    - no hardcoded backup
+    - more config options
