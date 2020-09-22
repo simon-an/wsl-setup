@@ -16,7 +16,8 @@
 - Git is already installed
 - git clone https://github.com/simon-an/wsl-setup.git
 - ./setup.sh
-
+- Optional: https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
+- p10k configure
 
 ## Features: 
 
