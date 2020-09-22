@@ -11,13 +11,11 @@ sleep 3
 cat nohup.out
 rm nohup.out
 
+cp .zshrc ~
+
 echo "------------------------------------------------------------------------"
 echo "Installing powerlevel10k\n"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-#( cd && curl -fsSLO https://raw.githubusercontent.com/romkatv/dotfiles-public/master/.purepower )
-#cp .p10k.zsh ~
-cp .zshrc ~
 
 echo "---------------------------------l---------------------------------------"
 echo "Installing ZSH plugins"
