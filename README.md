@@ -16,6 +16,7 @@
 - Optional: pass your CMDER_ROOT to wsl like this in cmd: 'setx WSLENV CMDER_ROOT/up'. This will use the credential-manager.exe from gitbash to reuse the credentials stored in windows.
 - Optional: create a private/gitclone.sh which will clone the repos for you.
 - Git is already installed in wsl!
+- but don't forget to import your private gpg key like so:  'gpg --import /mnt/.../privatekey'
 - open wsl in windows terminal
 - git clone https://github.com/simon-an/wsl-setup.git
 - export WINDOWS_HOME=~+ 
