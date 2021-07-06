@@ -1,0 +1,2 @@
+alias gcwork='git config user.name $GIT_WORK_USERNAME && git config user.email $GIT_WORK_EMAIL && git config user.signingkey $GIT_WORK_GPG_KEY'
+alias gcprivate='git config user.name $GIT_PRIVATE_USERNAME && git config user.email $GIT_PRIVATE_EMAIL && git config user.signingkey $GIT_PRIVATE_GPG_KEY'

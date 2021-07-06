@@ -1,6 +1,12 @@
 
 eval $(thefuck --alias)
+export GPG_TTY=$(tty)
+git config --global commit.gpgsign true
+
 source ~/.profile
+source ~/.variables
+source ~/.aliase
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -12,7 +18,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/simon/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -85,6 +91,7 @@ plugins=(
 	git 
 	docker-compose
 	docker
+	kubectl
 	mvn
 	ansible 
 	zsh-autosuggestions 
@@ -137,6 +144,13 @@ prompt_context() {
 		fi
 	fi
 }
+if [[ "$ZSH_THEME" = "powerlevel10k/powerlevel10k" ]] then
+ function prompt_example() {
+    emojis=("⚡️" "🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🇹🇭" "🚦" "🌙")
+    RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
+    p10k segment -b 1 -f 3 +r -i ${emojis[$RAND_EMOJI_N]} -t 'hello, %n'
+  }
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="~/.sdkman"

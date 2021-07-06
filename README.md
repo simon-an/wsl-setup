@@ -13,11 +13,18 @@
 
 ## Configure WSL
 
-- Git is already installed
+- Optional: pass your CMDER_ROOT to wsl like this in cmd: 'setx WSLENV CMDER_ROOT/up'. This will use the credential-manager.exe from gitbash to reuse the credentials stored in windows.
+- Optional: create a private/gitclone.sh which will clone the repos for you.
+- Git is already installed in wsl!
+- open wsl in windows terminal
 - git clone https://github.com/simon-an/wsl-setup.git
+- export WINDOWS_HOME=~+ 
+- echo $WINDOWS_HOME should be something like /mnt/c/Users/<USERNAME>
+- cd wsl-setup
+- if you use git cp variables-template to private/.variables and provide your secrets.
+- chmod +x setup.sh
 - ./setup.sh
-- Optional: https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
-- p10k configure
+- Optional: p10k configure if you want to change the config or edit .p10k.zsh for more customization
 
 ## Features: 
 
